@@ -1,5 +1,5 @@
 const counterValue = 0; // Початкове значення лічильника
-const valueSpan = document.querySelector('#value');
+const valueSpan = document.querySelector("#value");
 const decrementBtn = document.querySelector('[data-action="decrement"]');
 const incrementBtn = document.querySelector('[data-action="increment"]');
 
@@ -7,11 +7,11 @@ const incrementBtn = document.querySelector('[data-action="increment"]');
 valueSpan.textContent = counterValue;
 
 // Обробка кліків на кнопку зменшення
-decrementBtn.addEventListener('click', () => {
+decrementBtn.addEventListener("click", () => {
   valueSpan.textContent = counterValue - 1;
 });
 
 // Обробка кліків на кнопку збільшення
-incrementBtn.addEventListener('click', () => {
+incrementBtn.addEventListener("click", () => {
   valueSpan.textContent = counterValue + 1;
 });
