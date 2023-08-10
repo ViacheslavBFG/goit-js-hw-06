@@ -12,3 +12,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// Отримання посилання на список ul.gallery
+const galleryList = document.querySelector('.gallery');
+
+// Створення HTML-розмітки для кожного зображення і додавання до списку галереї
+const galleryItems = images.map(image => {
+  return `
+    <li class="gallery-item">
+      <img src="${image.url}" alt="${image.alt}" class="gallery-img">
+    </li>
+  `;
+});
+
+// Додавання усіх елементів галереї до списку ul.gallery за одну операцію
+galleryList.insertAdjacentHTML('beforeend', galleryItems.join(''));
